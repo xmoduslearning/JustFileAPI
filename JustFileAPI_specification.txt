@@ -1,0 +1,24 @@
+JustFileAPI external commands specification - draft
+
+NOTE: can place a hashtag in front of a line for it be skipped
+
+? what happens if the chunk, player, entity aren't loaded, etc.
+
+world.getBlock x y z
+world.setBlock x y z <name> <tags>
+
+examples:
+0. regular blocks (no tags)
+1. chests
+2. command blocks
+
+chest.addItem x y z @a|<playerName> <itemName> <qty> <itemTags>
+chest.removeItem x y z @a|<playerName> <itemName> [ALL|<qty>] <itemTags>
+
+player.giveItem @a|<playerName> <itemName> <qty> <itemTags>
+player.takeItem @a|<playerName> <itemName> [ALL|<qty>] <itemTags>
+player.playersList
+
+world.spawnEntity x y z <type> <name> <tags>
+world.removeNamedEntity <name> [<type>]
+world.removeEntity <type> [<name>]
