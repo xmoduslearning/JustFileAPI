@@ -13,7 +13,7 @@ public class ModCommands {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static void register(CommandDispatcher<CommandSource> dispatcher) {
+    public static void register(final CommandDispatcher<CommandSource> dispatcher) {
 
         LOGGER.debug("[ModCommands:register:event.JustFileAPI.MODID: " + JustFileAPI.MODID);
 
@@ -30,7 +30,7 @@ public class ModCommands {
                         .then(TestForSword.register(dispatcher))
         );
 
-        // currently unused "py" command
+        // currently unused "py" command - this will be the future cmd name (when the above is working!)
         // dispatcher.register(Commands.literal("py").redirect(cmdPy));
     }
 
